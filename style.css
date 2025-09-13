@@ -1,3 +1,94 @@
 * {
-    background-color: #121212;
+    background-color: #181818;
+    /* border: solid 1px red; */
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    color: white;
+}
+
+.header {
+    margin-bottom: 3%;
+}
+
+.header > .title {
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    font-size: 69px;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.result > .score {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 20%;
+}
+
+.result > .announcer {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+.result > .score > .player, 
+.result > .score > .dash, 
+.result > .score > .computer {
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.player-choice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* gap: 45px; */
+    margin: 0 10% 5%;
+}
+
+.rock, .paper, .scissors {
+    background-color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    width: 350px;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 69px;
+}
+
+.match-history {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 17%;
+}
+
+.match-history > .player, 
+.match-history > .computer {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
 }

@@ -1,5 +1,24 @@
 let humanScore = 0;
-let computerScore = 0;
+let computer_Score = 0;
+
+const result = document.querySelector(".result");
+const score = result.querySelector(".score");
+const player = score.querySelector(".player");
+const computer = score.querySelector(".computer");
+const playerScore = player.querySelector(".player-score");
+const computerScore = computer.querySelector(".computer-score");
+const announcer = result.querySelector(".announcer");
+
+const playerChoice = document.querySelector(".player-choice");
+const rock = playerChoice.querySelector(".rock");
+const paper = playerChoice.querySelector(".paper");
+const scissors = playerChoice.querySelector(".scissors");
+
+const matchHistory = document.querySelector(".match-history");
+const playerHistory = matchHistory.querySelector(".player");
+const playerChoices = playerHistory.querySelector(".player-choices");
+const computerHistory = matchHistory.querySelector(".computer");
+const computerChoices = computerHistory.querySelector(".computer-choices");
 
 function getComputerChoice() 
 {
@@ -64,7 +83,7 @@ function youWin(humanChoice, computerChoice)
 
 function youLose(humanChoice, computerChoice)
 {
-    computerScore++;
+    computer_Score++;
     console.log("You lose! " + computerChoice + " beats " + humanChoice)
     displayScore();
 }
@@ -77,7 +96,7 @@ function draw(humanChoice, computerChoice)
 
 function displayScore()
 {
-    console.log("Human: " + humanScore + "__________" + "Computer: " + computerScore);
+    console.log("Human: " + humanScore + "__________" + "Computer: " + computer_Score);
 }
 
 function playGame()
@@ -89,6 +108,9 @@ function playGame()
 
         playRound(humanSelection, computerSelectioin);
     }
-}
 
-playGame();
+    const humanSelection = getHumanChoice();
+    const computerSelectioin = getComputerChoice();
+
+    playRound(humanSelection, computerSelectioin);
+}
